@@ -1,9 +1,9 @@
 {
   "name": "dsh-panel-folders",
   "version": "0.1.1",
-  "repository": { "type": "git", "url": "git+https://github.com/FrankieeW/dsh-finder.git" },
-  "homepage": "https://github.com/FrankieeW/dsh-finder#readme",
-  "bugs": { "url": "https://github.com/FrankieeW/dsh-finder/issues" },
+  "repository": { "type": "git", "url": "git+https://github.com/FrankieeW/dsh-panel-folders.git" },
+  "homepage": "https://github.com/FrankieeW/dsh-panel-folders#readme",
+  "bugs": { "url": "https://github.com/FrankieeW/dsh-panel-folders/issues" },
   "description": "Collapsible groups for DeepSeek Harness sidebar launchers",
   "type": "module",
   "main": "./src/index.js",
