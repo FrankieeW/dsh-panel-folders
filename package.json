@@ -1,0 +1,45 @@
+{
+  "name": "@frankieew/dsh-finder",
+  "version": "0.1.1",
+  "repository": { "type": "git", "url": "git+https://github.com/FrankieeW/dsh-finder.git" },
+  "homepage": "https://github.com/FrankieeW/dsh-finder#readme",
+  "bugs": { "url": "https://github.com/FrankieeW/dsh-finder/issues" },
+  "description": "Collapsible groups for DeepSeek Harness sidebar launchers",
+  "type": "module",
+  "main": "./src/index.js",
+  "exports": {
+    ".": "./src/index.js",
+    "./client": "./lib/client.js",
+    "./package.json": "./package.json"
+  },
+  "files": ["src/index.js", "lib", "cordis.patch.yml", "README.md", "THIRD_PARTY_NOTICES.md"],
+  "engines": { "node": ">=24.9.0", "dsh": "0.2.2-rc.1" },
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "test": "node --test test/*.test.js",
+    "prepack": "npm run build"
+  },
+  "dsh": {
+    "manifestVersion": 1,
+    "bundle": { "patch": "./cordis.patch.yml" },
+    "client": {
+      "platform": "web",
+      "inject": [
+        "@deepseek-ai/dsh-api-workspace-controller",
+        "@deepseek-ai/dsh-client-ui-renderer",
+        "@deepseek-ai/dsh-client-ui-layout",
+        "@deepseek-ai/dsh-client-ui-session",
+        "@deepseek-ai/dsh-client-ui-workspace",
+        "@deepseek-ai/dsh-client-locale",
+        "@deepseek-ai/dsh-client-shortcuts"
+      ]
+    }
+  },
+  "peerDependencies": { "@deepseek-ai/cordis": "~4.1.0" },
+  "devDependencies": {
+    "@deepseek-ai/dsh-client-ui-sidebar": "0.2.2-rc.1",
+    "esbuild": "^0.25.0",
+    "react": "18.3.1",
+    "react-dom": "18.3.1"
+  }
+}

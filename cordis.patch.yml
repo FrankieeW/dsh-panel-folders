@@ -1,0 +1,6 @@
+# The plugin embeds and composes the native shell; only one shell may register.
+- id: ui-sidebar
+  disabled: true
+- insert:
+    - id: dsh-finder
+      name: '@frankieew/dsh-finder'
