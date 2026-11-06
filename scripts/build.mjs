@@ -12,7 +12,7 @@ if (!factory) throw new Error('Unsupported DSH sidebar client format');
 // disabled by our patch, and its style cleanup must not remove our copy. Give
 // the embedded styles their own owner and IDs, without changing the CSS itself.
 const nativeOwner = '@deepseek-ai/dsh-client-ui-sidebar';
-const finderOwner = '@frankieew/dsh-finder';
+const finderOwner = 'dsh-panel-folders';
 const nativeFactory = factory.toString();
 const occurrences = nativeFactory.split(nativeOwner).length - 1;
 if (occurrences !== 4) throw new Error(`Unsupported DSH sidebar CSS ownership: found ${occurrences} references`);
@@ -31,5 +31,5 @@ const result = await build({
   }],
 });
 await mkdir('lib', { recursive: true });
-await writeFile('lib/client.js', `window.__ModuleLoader__.load({id:'@frankieew/dsh-finder',factory:(require)=>{var module={exports:{}};var exports=module.exports;\n${result.outputFiles[0].text}\nreturn module.exports;}});\n`);
+await writeFile('lib/client.js', `window.__ModuleLoader__.load({id:'dsh-panel-folders',factory:(require)=>{var module={exports:{}};var exports=module.exports;\n${result.outputFiles[0].text}\nreturn module.exports;}});\n`);
 console.log('Built dsh-finder with the DSH 0.2.2-rc.1 sidebar shell.');

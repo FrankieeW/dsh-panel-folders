@@ -1,4 +1,4 @@
-# dsh-finder
+# dsh-panel-folders
 
 为 **DeepSeek Harness 0.2.2-rc.1** 左侧栏的全局面板入口添加可折叠分组。例如把音乐、小游戏等已安装工具收进「摸鱼工具」，平时只显示一个文件夹。
 
@@ -19,7 +19,7 @@
 
 需要 Node.js 24.9+ 和 DSH **0.2.2-rc.1**。其他 DSH 版本未验证，不应强制豁免版本检查。
 
-在 DSH 插件管理器的第三方插件安装入口输入 `@frankieew/dsh-finder` 即可安装。若已安装过本地测试版 `dsh-finder`，请先将其禁用或卸载，避免两个侧栏插件同时运行；同一 origin 下的分组数据会保留。
+在 DSH 插件管理器的第三方插件安装入口输入 `dsh-panel-folders` 即可安装。若已安装过本地测试版 `dsh-finder`，请先将其禁用或卸载，避免两个侧栏插件同时运行；同一 origin 下的分组数据会保留。
 
 ```sh
 npm install
@@ -31,10 +31,10 @@ npm pack
 Web profile 可安装生成的包（将路径替换为实际绝对路径）：
 
 ```sh
-dsh plugin --profile web add /absolute/path/frankieew-dsh-finder-0.1.1.tgz
+dsh plugin --profile web add /absolute/path/dsh-panel-folders-0.1.1.tgz
 ```
 
-安装后启用 `@frankieew/dsh-finder` bundle，重启对应 DSH Host 并刷新界面。Desktop 可在 **插件 → 添加插件 → 安装第三方插件** 输入生成的 `.tgz` 的本机绝对路径，安装后启用；npm 安装的 `dsh` 不支持修改 Desktop profile。远程 Host 的路径应指向 Host 上的文件，不是浏览器所在电脑。
+安装后启用 `dsh-panel-folders` bundle，重启对应 DSH Host 并刷新界面。Desktop 可在 **插件 → 添加插件 → 安装第三方插件** 输入生成的 `.tgz` 的本机绝对路径，安装后启用；npm 安装的 `dsh` 不支持修改 Desktop profile。远程 Host 的路径应指向 Host 上的文件，不是浏览器所在电脑。
 
 本目录的构建和测试不会修改当前用户的 DSH profile。安装会影响所选 profile 的整个侧栏，而不只是一个会话。
 

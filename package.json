@@ -1,5 +1,5 @@
 {
-  "name": "@frankieew/dsh-finder",
+  "name": "dsh-panel-folders",
   "version": "0.1.1",
   "repository": { "type": "git", "url": "git+https://github.com/FrankieeW/dsh-finder.git" },
   "homepage": "https://github.com/FrankieeW/dsh-finder#readme",

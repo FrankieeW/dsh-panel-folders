@@ -111,7 +111,7 @@ export function apply(ctx) {
   ctx.effect(() => () => store.dispose());
   ctx.effect(() => {
     const style = document.createElement('style');
-    style.dataset.plugin = '@frankieew/dsh-finder'; style.textContent = css;
+    style.dataset.plugin = 'dsh-panel-folders'; style.textContent = css;
     document.head.appendChild(style);
     return () => style.remove();
   });

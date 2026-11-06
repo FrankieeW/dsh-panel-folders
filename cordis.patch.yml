@@ -3,4 +3,4 @@
   disabled: true
 - insert:
     - id: dsh-finder
-      name: '@frankieew/dsh-finder'
+      name: 'dsh-panel-folders'

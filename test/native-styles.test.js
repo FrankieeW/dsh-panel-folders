@@ -34,7 +34,7 @@ test('embedded native CSS stays intact when native sidebar styles are removed', 
   const nativeStyles = env.styles.map(style => style.textContent);
   assert.equal(nativeStyles.length, 2);
   loadFactory(bundle, env);
-  const finderStyles = env.styles.filter(style => style.dataset.plugin === '@frankieew/dsh-finder');
+  const finderStyles = env.styles.filter(style => style.dataset.plugin === 'dsh-panel-folders');
   assert.equal(finderStyles.length, 2);
   assert.deepEqual(finderStyles.map(style => style.textContent), nativeStyles);
   const remaining = env.styles.filter(style => style.dataset.plugin !== '@deepseek-ai/dsh-client-ui-sidebar');
